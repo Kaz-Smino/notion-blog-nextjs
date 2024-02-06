@@ -18,7 +18,7 @@ export default async function Page() {
       <main className={styles.container}>
         <header className={styles.header}>
           <div className={styles.headerContainer}>
-            <h1>Kaz's Dev Diary</h1>
+            <h1>Kaz&apos;s Dev Diary</h1>
             <div className={styles.logos}>
               <a href="https://github.com/Kaz-Smino" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
