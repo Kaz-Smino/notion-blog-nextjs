@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Notion Next.js blog',
-  description: 'Notion Next.js blog',
+  title: "Kaz's Dev Diary",
+  description: 'Blog description',
 };
 
 export default function RootLayout({ children }) {

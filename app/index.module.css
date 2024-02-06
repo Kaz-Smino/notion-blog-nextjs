@@ -6,7 +6,7 @@
 
 .logos {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   padding: 40px 0 20px;
 }
 
@@ -19,9 +19,15 @@
   line-height: 1.5;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .plus {
   font-size: 20px;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .heading {
