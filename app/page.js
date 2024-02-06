@@ -5,6 +5,12 @@ import styles from './index.module.css';
 
 export const databaseId = process.env?.NOTION_DATABASE_ID ?? 'NOTION_DATABASE_ID';
 
+export function getDisplayDate(editedDate, createdDate) {
+  return editedDate === createdDate
+    ? `Published: <strong>${createdDate}</strong>`
+    : `Revised: <strong>${editedDate}</strong>`;
+}
+
 async function getPosts() {
   const database = await getDatabase();
 
@@ -64,9 +70,7 @@ export default async function Page() {
                 year: 'numeric',
               },
             );
-            const displayDate = editedDate === createdDate
-              ? `Published: <strong>${createdDate}</strong>`
-              : `Published: <strong>${createdDate}</strong>, Revised: <strong>${editedDate}</strong>`;
+            const displayDate = getDisplayDate(editedDate, createdDate);
             const slug = post.properties?.Slug?.rich_text[0].text.content;
             return (
               <li key={post.id} className={styles.post}>
