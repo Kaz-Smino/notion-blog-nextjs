@@ -59,13 +59,9 @@ export default async function Page() {
             </div>
           </div>
           <p>
-            Implemented with <strong>Next.js</strong>
-            <br />
-            this technical blog serves as a platform to document daily
-            learnings.
-            <br />
-            Blog post data is fetched using <strong>Notion</strong>
-            &apos;s API.
+            Powered by <strong>Next.js</strong>, this technical blog acts as a
+            knowledge hub for documenting daily insights. It leverages{" "}
+            <strong>Notion API</strong> to fetch blog post data.
           </p>
         </header>
 
@@ -78,7 +74,7 @@ export default async function Page() {
                 month: "short",
                 day: "2-digit",
                 year: "numeric",
-              },
+              }
             );
             const createdDate = new Date(post.created_time).toLocaleString(
               "en-US",
@@ -86,7 +82,7 @@ export default async function Page() {
                 month: "short",
                 day: "2-digit",
                 year: "numeric",
-              },
+              }
             );
             const displayDate = getDisplayDate(editedDate, createdDate);
             const slug = post.properties?.Slug?.rich_text[0].text.content;
