@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:@next/next/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -34,5 +35,6 @@ module.exports = {
       custom: 'ignore',
     }],
     'react/prop-types': [0],
+    "react/no-danger": "off",
   },
 };
