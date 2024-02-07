@@ -5,36 +5,37 @@ module.exports = {
     node: true,
   },
   extends: [
-    'airbnb',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:@next/next/recommended',
-    'prettier',
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@next/next/recommended",
+    "prettier",
   ],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script',
+        sourceType: "script",
       },
     },
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/jsx-props-no-spreading': [1, {
-      custom: 'ignore',
-    }],
-    'react/prop-types': [0],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": [
+      1,
+      {
+        custom: "ignore",
+      },
+    ],
+    "react/prop-types": [0],
     "react/no-danger": "off",
   },
 };
