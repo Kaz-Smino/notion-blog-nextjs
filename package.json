@@ -26,6 +26,8 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@next/eslint-plugin-next": "^13.4.16",
+    "@swc/core": "^1.4.0",
+    "@swc/jest": "^0.2.36",
     "@testing-library/react": "^14.2.1",
     "babel-jest": "^29.7.0",
     "encoding": "^0.1.13",
