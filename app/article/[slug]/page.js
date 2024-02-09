@@ -32,9 +32,19 @@ export default async function Page({ params }) {
       </Head>
 
       <article className={styles.container}>
+        <Link href="/" className={styles.back}>
+          ← Go home
+        </Link>
         <h1 className={styles.name}>
           <Text title={page.properties.Title?.title} />
         </h1>
+        <time className={styles.date}>
+          {new Date(page.last_edited_time).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </time>
         <section>
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
