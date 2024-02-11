@@ -9,6 +9,8 @@ export function renderBlock(block) {
   const { type, id } = block;
   const value = block[type];
 
+  // eslint-disable-next-line no-console
+  console.log("When displaying the article: 4. renderBlock");
   switch (type) {
     case "paragraph":
       return (
@@ -172,6 +174,9 @@ export function renderBlock(block) {
 export function renderNestedList(blocks) {
   const { type } = blocks;
   const value = blocks[type];
+
+  // eslint-disable-next-line no-console
+  console.log(`debug_renderNestedList`);
   if (!value) return null;
 
   const isNumberedList = value.children[0].type === "numbered_list_item";

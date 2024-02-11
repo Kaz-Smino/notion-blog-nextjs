@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import Text from "../components/text";
-import styles from "./index.module.css";
+import styles from "../styles/index.module.css";
 
 export const databaseId =
   process.env?.NOTION_DATABASE_ID ?? "NOTION_DATABASE_ID";
@@ -20,6 +20,8 @@ async function getPosts() {
 
 export default async function Page() {
   const posts = await getPosts();
+  // eslint-disable-next-line no-console
+  console.log(`3. debug_getPosts`);
   return (
     <div>
       <main className={styles.container}>
@@ -60,8 +62,7 @@ export default async function Page() {
           </div>
           <p>
             Powered by <strong>Next.js</strong>, this technical blog acts as a
-            knowledge hub for documenting daily insights. It leverages{" "}
-            <strong>Notion API</strong> to fetch blog post data.
+            knowledge hub for documenting daily insights.
           </p>
         </header>
 

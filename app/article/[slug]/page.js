@@ -10,6 +10,8 @@ import styles from "../../../styles/post.module.css";
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   const database = await getDatabase();
+  // eslint-disable-next-line no-console
+  console.log(`3. debug_generateStaticParams`);
   return database?.map((page) => {
     const slug = page.properties.Slug?.formula?.string;
     return { id: page.id, slug };
@@ -24,6 +26,8 @@ export default async function Page({ params }) {
     return <div />;
   }
 
+  // eslint-disable-next-line no-console
+  console.log("When displaying the article: 3. Page");
   return (
     <div>
       <Head>
