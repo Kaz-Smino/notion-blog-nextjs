@@ -10,6 +10,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const currentTime = new Date();
+  // eslint-disable-next-line no-console
+  console.log(`1. debug_RootLayout : ${currentTime}`);
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
